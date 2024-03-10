@@ -1,0 +1,20 @@
+/* Box-shadow */
+@mixin box-shadow($hor, $ver, $blur, $spread, $cor) {
+    -webkit-box-shadow: $hor $ver $blur $spread $cor;
+    -moz-box-shadow: $hor $ver $blur $spread $cor;
+    box-shadow: $hor $ver $blur $spread $cor;
+}
+
+@mixin flex-center($gap) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin flex-justify-align($justify, $align, $gap) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}

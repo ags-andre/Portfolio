@@ -1,0 +1,66 @@
+@use "../design/mixins/mixins.scss";
+@import "../design/variables/variables.scss";
+
+header {
+    padding: 20px;
+    @include mixins.box-shadow(0, 2px, 16px, 0, $black-op);
+
+    nav {
+        ul {
+            @include mixins.flex-center(25px);
+            list-style-type: none;
+
+            li {
+                padding: 10px;
+                cursor: pointer;
+                position: relative;
+                
+                &:hover::before, &:hover::after {
+                    animation: navbarEffect .8s ease forwards;
+                }
+                
+                &::before, &::after {
+                    content: '';
+                    transition: all .5s;
+                    position: absolute;
+                    width: 100%;
+                    height: 0px;
+                    transform: scaleX(0);
+                }
+
+                &::before {
+                    top: 0;
+                    left: -2px;
+                    transform-origin: right;
+                    border-top: 2px solid $green-1;
+                    border-left: 2px solid $green-1;
+                }
+
+                &::after {
+                    bottom: 0;
+                    right: -2px;
+                    transform-origin: left;
+                    border-bottom: 2px solid $green-1;
+                    border-right: 2px solid $green-1;
+                }
+            }
+        }
+    }
+}
+
+@keyframes navbarEffect {
+    0% {
+        transform: scaleX(0);
+        height: 0;
+    }
+    50% {
+        transform: scaleX(1);
+        height: 0;
+        width: 100%;
+    }
+    100% {
+        transform: scaleX(1);
+        width: 50%;
+        height: 50%;
+    }
+}

@@ -1,0 +1,59 @@
+/* Box-shadow */
+header {
+  padding: 20px;
+  box-shadow: 0 2px 16px 0 rgba(0, 0, 0, 0.4941176471);
+}
+header nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  list-style-type: none;
+}
+header nav ul li {
+  padding: 10px;
+  cursor: pointer;
+  position: relative;
+}
+header nav ul li:hover::before, header nav ul li:hover::after {
+  animation: navbarEffect 0.8s ease forwards;
+}
+header nav ul li::before, header nav ul li::after {
+  content: "";
+  transition: all 0.5s;
+  position: absolute;
+  width: 100%;
+  height: 0px;
+  transform: scaleX(0);
+}
+header nav ul li::before {
+  top: 0;
+  left: -2px;
+  transform-origin: right;
+  border-top: 2px solid #007946;
+  border-left: 2px solid #007946;
+}
+header nav ul li::after {
+  bottom: 0;
+  right: -2px;
+  transform-origin: left;
+  border-bottom: 2px solid #007946;
+  border-right: 2px solid #007946;
+}
+
+@keyframes navbarEffect {
+  0% {
+    transform: scaleX(0);
+    height: 0;
+  }
+  50% {
+    transform: scaleX(1);
+    height: 0;
+    width: 100%;
+  }
+  100% {
+    transform: scaleX(1);
+    width: 50%;
+    height: 50%;
+  }
+}/*# sourceMappingURL=header.css.map */
