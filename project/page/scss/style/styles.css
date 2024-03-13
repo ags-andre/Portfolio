@@ -1,11 +1,101 @@
+/* Box-shadow */
+/* $green-1: #007946;
+$green-1-op: #0079477a; */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Fundo scroll*/
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Scroll */
+::-webkit-scrollbar-thumb {
+  background-color: rgba(99, 96, 96, 0.3960784314);
+  border-radius: 50px;
+}
+
 html {
-  height: 100%;
+  height: -moz-max-content;
+  height: max-content;
   min-height: 100%;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-color: #011016;
+  color: #fff;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h1, h3, p {
+  margin-bottom: 10px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+main {
+  /* Sections */
+}
+main .sobre {
+  background-color: #010b0f;
+  padding: 25px;
+  border-top-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+  box-shadow: inset 0 -2px 10px 0 rgba(0, 0, 0, 0.4941176471);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+main .sobre figure {
+  width: clamp(150px, 100%, 280px);
+  height: clamp(150px, 100%, 280px);
+  position: relative;
+  border-radius: 50%;
+  filter: drop-shadow(0 0 5px #000);
+}
+main .sobre figure img {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+main .sobre article {
+  flex: 2 1 350px;
+  max-width: 800px;
+}
+main .sobre article h1 {
+  color: #0fae76;
+}
+main .sobre article button {
+  padding: 10px;
+  margin-top: 10px;
+  background: linear-gradient(90deg, #0b9c66 47%, #003f21 50%);
+  background-size: 200%;
+  background-position: 99% 0%;
+  color: #fff;
+  border: 2px solid #003f21;
+  border-radius: 3px;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-weight: 600;
+}
+main .sobre article button:hover {
+  background-position: 0 100%;
+}
+
+@keyframes animate-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=styles.css.map */

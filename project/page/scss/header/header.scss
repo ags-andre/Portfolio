@@ -2,46 +2,53 @@
 @import "../design/variables/variables.scss";
 
 header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    background-color: $black-bg;
     padding: 20px;
-    @include mixins.box-shadow(0, 2px, 16px, 0, $black-op);
+    @include mixins.box-shadow(0, 2px, 6px, 0, $black-op);
 
     nav {
-        ul {
-            @include mixins.flex-center(25px);
-            list-style-type: none;
+        white-space: nowrap;
 
+        ul {
+            @include mixins.flex-center(10px);
+            list-style-type: none;
+            
             li {
-                padding: 10px;
+                padding: 9px;
                 cursor: pointer;
                 position: relative;
                 
                 &:hover::before, &:hover::after {
-                    animation: navbarEffect .8s ease forwards;
+                    color: $green-1;
+                    animation: navbarEffect .4s forwards;
                 }
                 
                 &::before, &::after {
                     content: '';
-                    transition: all .5s;
                     position: absolute;
                     width: 100%;
-                    height: 0px;
+                    height: 0%;
                     transform: scaleX(0);
+                    transition: all .4s;
                 }
 
                 &::before {
                     top: 0;
                     left: -2px;
                     transform-origin: right;
-                    border-top: 2px solid $green-1;
-                    border-left: 2px solid $green-1;
+                    border-top: 2px solid $green-3;
+                    border-left: 2px solid $green-3;
                 }
 
                 &::after {
                     bottom: 0;
                     right: -2px;
                     transform-origin: left;
-                    border-bottom: 2px solid $green-1;
-                    border-right: 2px solid $green-1;
+                    border-bottom: 2px solid $green-3;
+                    border-right: 2px solid $green-3;
                 }
             }
         }

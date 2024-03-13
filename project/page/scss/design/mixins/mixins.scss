@@ -4,6 +4,11 @@
     -moz-box-shadow: $hor $ver $blur $spread $cor;
     box-shadow: $hor $ver $blur $spread $cor;
 }
+@mixin box-shadow-inset($hor, $ver, $blur, $spread, $cor) {
+    -webkit-box-shadow: inset $hor $ver $blur $spread $cor;
+    -moz-box-shadow: inset $hor $ver $blur $spread $cor;
+    box-shadow: inset $hor $ver $blur $spread $cor;
+}
 
 @mixin flex-center($gap) {
     display: flex;
@@ -17,4 +22,18 @@
     justify-content: $justify;
     align-items: $align;
     gap: $gap;
+    flex-wrap: wrap;
+}
+
+@mixin flex-justify($justify, $gap) {
+    display: flex;
+    justify-content: $justify;
+    gap: $gap;
+    flex-wrap: wrap;
+}
+
+@mixin mobile-max-w($width) {
+    @media (max-width: $width) {
+      @content
+    }
 }

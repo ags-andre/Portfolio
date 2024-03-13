@@ -1,11 +1,93 @@
+@use "../design/mixins/mixins.scss";
+@import "../design/variables/variables.scss";
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Fundo scroll*/
+::-webkit-scrollbar {
+    width: 6px;
+}
+  
+ /* Scroll */
+::-webkit-scrollbar-thumb {
+    background-color: $gray-op;
+    border-radius: 50px;
+}
+
 html {
-    height: 100%;
+    height: max-content;
     min-height: 100%;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: $black-bg;
+    color: $white;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+h1, h3, p {
+    margin-bottom: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+}
+
+main {
+    /* Sections */
+    .sobre {
+        background-color: $black-bg-2;
+        padding: 25px;
+        border-top-left-radius: 100px;
+        border-bottom-right-radius: 100px;
+        @include mixins.box-shadow-inset(0, -2px, 10px, 0, $black-op);
+        @include mixins.flex-justify-align(space-evenly, center, 30px);
+    
+        figure {
+            width: clamp(150px, 100%, 280px);
+            height: clamp(150px, 100%, 280px);
+            position: relative;
+            border-radius: 50%;
+            filter: drop-shadow(0 0 5px $black);
+
+            img {
+                width: inherit;
+                height: inherit;
+                border-radius: inherit;
+            }
+        }
+
+        article {
+            flex: 2 1 350px;
+            max-width: 800px;
+
+            h1 {
+                color: $green-6;
+            }
+
+            button {
+                padding: 10px;
+                margin-top: 10px;
+                background: linear-gradient(90deg, $green-5 47%, $green-1 50%);
+                background-size: 200%;
+                background-position: 99% 0%;
+                color: $white;
+                border: 2px solid $green-1;
+                border-radius: 3px;
+                transition: all .3s;
+                cursor: pointer;
+                font-weight: 600;
+
+                &:hover {
+                    background-position: 0 100%;
+                }
+            }
+        }
+    }
 }
