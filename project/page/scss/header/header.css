@@ -4,25 +4,91 @@ $green-1-op: #0079477a; */
 header {
   position: sticky;
   top: 0;
-  z-index: 1;
-  background-color: #011016;
+  z-index: 2 !important;
+  background-color: #01131b;
   padding: 20px;
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.4941176471);
+  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.7803921569);
+}
+@media (max-width: 600px) {
+  header {
+    text-align: end;
+  }
 }
 header nav {
   white-space: nowrap;
+  display: block;
+}
+@media (max-width: 600px) {
+  header nav {
+    display: none;
+    position: fixed;
+    inset: 62px 0 0;
+    background-color: rgba(0, 0, 0, 0.7803921569);
+    z-index: 1 !important;
+  }
 }
 header nav ul {
+  list-style-type: none;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
-  list-style-type: none;
+}
+@media (max-width: 600px) {
+  header nav ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    flex-direction: column;
+    width: -moz-max-content;
+    width: max-content;
+    background-color: #01131b;
+  }
 }
 header nav ul li {
   padding: 9px;
   cursor: pointer;
   position: relative;
+}
+@media (max-width: 600px) {
+  header nav ul li {
+    padding: 16px 25px;
+    width: 100%;
+    text-align: start;
+    position: relative;
+    transform: rotateX(-90deg);
+  }
+  header nav ul li:nth-child(1) {
+    animation: navbarMobile 0.3s forwards;
+  }
+  header nav ul li:nth-child(2) {
+    animation: navbarMobile 0.3s 0.3s forwards;
+  }
+  header nav ul li:nth-child(3) {
+    animation: navbarMobile 0.3s 0.6s forwards;
+  }
+  header nav ul li:nth-child(4) {
+    animation: navbarMobile 0.3s 0.9s forwards;
+  }
+  header nav ul li::before {
+    display: none;
+  }
+  header nav ul li::after {
+    width: 100% !important;
+    height: 3px !important;
+    background-color: #088a56 !important;
+    transform: scaleX(0) !important;
+    transform-origin: center !important;
+    transition: 0.4s ease !important;
+    animation: none !important;
+    border: none !important;
+    opacity: 0;
+  }
+  header nav ul li:hover::after {
+    opacity: 1;
+    transform: scaleX(1) !important;
+  }
 }
 header nav ul li:hover::before, header nav ul li:hover::after {
   color: #003f21;
@@ -34,7 +100,6 @@ header nav ul li::before, header nav ul li::after {
   width: 100%;
   height: 0%;
   transform: scaleX(0);
-  transition: all 0.4s;
 }
 header nav ul li::before {
   top: 0;
@@ -50,12 +115,53 @@ header nav ul li::after {
   border-bottom: 2px solid #047845;
   border-right: 2px solid #047845;
 }
+header .menu-mobile {
+  padding: 10px 5px;
+  cursor: pointer;
+  width: -moz-max-content;
+  width: max-content;
+  display: none;
+}
+@media (max-width: 600px) {
+  header .menu-mobile {
+    display: block !important;
+  }
+}
+header .menu-mobile div {
+  position: relative;
+}
+header .menu-mobile div, header .menu-mobile div::before, header .menu-mobile div::after {
+  background-color: #fff;
+  width: 24px;
+  height: 2px;
+  border-radius: 5px;
+}
+header .menu-mobile div::before, header .menu-mobile div::after {
+  content: "";
+  position: absolute;
+  transition: 0.4s ease;
+}
+header .menu-mobile div::before {
+  top: -6px;
+  left: 0;
+}
+header .menu-mobile div::after {
+  bottom: -6px;
+  left: 0;
+}
+header .opened {
+  background: transparent !important;
+}
+header .opened::before {
+  top: 0 !important;
+  transform: rotate(45deg) !important;
+}
+header .opened::after {
+  bottom: 0 !important;
+  transform: rotate(-45deg) !important;
+}
 
 @keyframes navbarEffect {
-  0% {
-    transform: scaleX(0);
-    height: 0;
-  }
   50% {
     transform: scaleX(1);
     height: 0;
@@ -65,5 +171,11 @@ header nav ul li::after {
     transform: scaleX(1);
     width: 50%;
     height: 50%;
+  }
+}
+@keyframes navbarMobile {
+  to {
+    transform: rotateX(0deg);
+    opacity: 1;
   }
 }/*# sourceMappingURL=header.css.map */

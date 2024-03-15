@@ -5,6 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../scss/style/styles.css">
     <link rel="stylesheet" href="../scss/header/header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <script src="../js/index.js" defer></script>
+    <script src="../js/header.js" defer></script>
+    
     <title>Portfólio - André Gustavo Santos</title>
 </head>
 <body>
@@ -17,6 +24,10 @@
                 <li><a href="#contatos">Contatos</a></li>
             </ul>
         </nav>
+
+        <div class="menu-mobile" onclick="openMenu()">
+            <div></div>
+        </div>
     </header>
 
     <main>
@@ -29,11 +40,14 @@
                 <span>Olá, </span>
                 <h1>Eu sou André!</h1>
                 <h3>Desenvolvedor Front-End</h3>
-                <p>Me chamo André Gustavo Santos, tenho 23 anos e atualmente resido em Osasco/SP.</p>
+                <p>Me chamo André Gustavo Santos, tenho 23 anos e atualmente resido em São Paulo/SP.</p>
                 <p>Sou um profissional extremamente aplicado, que busca sempre por novos conhecimentos, e aprendizados pessoais e profissionais.</p>
-                <p>Já atuo à 4 anos na área como desenvolvedor de software, tendo maior foco e especialidade em aplicações Front-End.</p>
+                <p>Já atuo à 3 anos na área como desenvolvedor de software, tendo maior foco e especialidade em aplicações Front-End.</p>
 
-                <button type="button">Baixar Currículo</button>
+                <button type="button">
+                    Baixar Currículo
+                    <span class="material-symbols-outlined">download_2</span>
+                </button>
             </article>
         </section>
 

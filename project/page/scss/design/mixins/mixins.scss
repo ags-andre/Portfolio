@@ -17,6 +17,11 @@
     gap: $gap;
 }
 
+@mixin flex-center-column($gap) {
+    @include flex-center($gap);
+    flex-direction: column;
+}
+
 @mixin flex-justify-align($justify, $align, $gap) {
     display: flex;
     justify-content: $justify;
