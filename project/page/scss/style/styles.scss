@@ -94,7 +94,7 @@ main {
 
         &.competencias {
             .cards-container {
-                max-width: 800px;
+                max-width: 850px;
                 margin: 30px auto;
                 @include mixins.flex-justify(center, 20px);
                 

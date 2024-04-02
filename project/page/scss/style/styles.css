@@ -95,7 +95,7 @@ main section.sobre article button:hover {
   background-position: 0 100%;
 }
 main section.competencias .cards-container {
-  max-width: 800px;
+  max-width: 850px;
   margin: 30px auto;
   display: flex;
   justify-content: center;
