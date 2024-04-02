@@ -91,5 +91,82 @@ main {
                 }
             }
         }
+
+        &.competencias {
+            .cards-container {
+                max-width: 800px;
+                margin: 30px auto;
+                @include mixins.flex-justify(center, 20px);
+                
+                .card {
+                    background-color: $black-bg;
+                    flex: 1 1 200px;
+                    max-width: 270px;
+                    max-height: 270px;
+                    padding: 20px;
+                    border-radius: 20px;
+                    cursor: pointer;
+                    position: relative;
+                    overflow: hidden;
+                    @include mixins.flex-center-column(10px);
+                    @include mixins.box-shadow(0, 0px, 4px, 0, $green-4);
+
+                    img {
+                        width: 80%;
+                        object-fit: fill;
+                        aspect-ratio: 3 / 4;
+                    }
+                    
+                    h3 {
+                        margin-block: 10px 0;
+                        position: absolute;
+                        bottom: 0px;
+                        width: 100%;
+                        text-align: center;
+                        opacity: 0;
+                    }
+
+                    img, h3 {
+                        transition: all .4s ease;
+                        z-index: 1;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        right: 0;
+                        //background-color: $black-bg-2;
+                        background-color: $black;
+                        border-top-left-radius: 150%;
+                        width: 0;
+                        height: 0;
+                        transition: .8s;
+                    }
+
+                    &:hover {
+                        img {
+                            transform: scale(.8) translateY(-20px);
+                            //aspect-ratio: 1 / 1 !important;
+                        }
+                        h3 {
+                            opacity: 1;
+                            bottom: 20px;
+                        }
+
+                        &::after {
+                            width: 200%;
+                            height: 200%;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:not(:nth-child(1)) {
+            h1 {
+                text-align: center;
+            }
+        }
     } 
 }
