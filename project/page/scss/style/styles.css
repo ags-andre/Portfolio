@@ -159,6 +159,39 @@ main section.competencias .cards-container .card:hover::after {
   width: 200%;
   height: 200%;
 }
+main section.exp article {
+  max-width: 850px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 6px;
+  overflow-y: hidden;
+  transition: 0.4s;
+  box-shadow: 0 0px 4px 0 #088a56;
+}
+main section.exp article .titulo {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  cursor: pointer;
+}
+main section.exp article .titulo h3 {
+  margin: 0;
+}
+main section.exp article .titulo button {
+  color: #fff;
+  border: none;
+  background: transparent;
+  transition: 0.4s;
+  transform: rotate(0deg);
+}
+main section.exp article .descricao {
+  border-top: 2px solid #088a56;
+  padding-top: 20px;
+  margin-top: 20px;
+}
 main section:not(:nth-child(1)) h1 {
   text-align: center;
 }/*# sourceMappingURL=styles.css.map */
