@@ -26,12 +26,12 @@ html {
 }
 
 h1 {
-  font-size: 30px;
-  margin-bottom: 30px;
+  font-size: 1.87rem;
+  margin-bottom: 1.87rem;
 }
 
 h3, p {
-  margin-bottom: 10px;
+  margin-bottom: 0.62rem;
 }
 
 a {
@@ -43,7 +43,7 @@ main {
   /* Sections */
 }
 main section {
-  padding: 25px;
+  padding: 1.56rem;
 }
 main section:not(:nth-child(1)) {
   max-width: 950px;
@@ -63,7 +63,7 @@ main section.sobre {
   flex-wrap: wrap;
 }
 main section.sobre h1 {
-  margin-bottom: 10px;
+  margin-bottom: 0.62rem;
 }
 main section.sobre figure {
   width: clamp(150px, 100%, 280px);
@@ -90,8 +90,8 @@ main section.sobre article a {
   display: block;
 }
 main section.sobre article a button {
-  padding: 10px;
-  margin-top: 30px;
+  padding: 0.62rem;
+  margin-top: 1.87rem;
   background: linear-gradient(90deg, #0b9c66 47%, #003f21 50%) 99.5% 0%/200%;
   color: #fff;
   border: 2px solid #003f21;
@@ -99,38 +99,38 @@ main section.sobre article a button {
   transition: background-position 0.3s;
   cursor: pointer;
   font-weight: 500;
-  font-size: 15px;
+  font-size: 0.93rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 8px;
+  gap: 0.5rem;
 }
 main section.sobre article a button:hover {
   background-position: 0 100%;
 }
 main section.competencias p {
-  margin-bottom: 30px;
+  margin-bottom: 1.87rem;
 }
 main section.competencias .cards-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 1.25rem;
   flex-wrap: wrap;
 }
 main section.competencias .cards-container .card {
   background-color: #00070a;
   flex: 1 1 300px;
-  max-width: 270px;
-  max-height: 270px;
-  padding: 20px;
-  border-radius: 20px;
+  max-width: 16.87rem;
+  max-height: 16.87rem;
+  padding: 1.25rem;
+  border-radius: 1.25rem;
   cursor: pointer;
   position: relative;
   overflow: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.62rem;
   flex-direction: column;
   box-shadow: 0 0px 4px 0 #088a56;
 }
@@ -141,9 +141,9 @@ main section.competencias .cards-container .card img {
   aspect-ratio: 3/4;
 }
 main section.competencias .cards-container .card h3 {
-  margin-block: 10px 0;
+  margin-block: 0.62rem 0;
   position: absolute;
-  bottom: 0px;
+  bottom: 0;
   width: 100%;
   text-align: center;
   opacity: 0;
@@ -157,10 +157,10 @@ main section.competencias .cards-container .card::after {
   position: absolute;
   bottom: 0;
   right: 0;
-  background-color: #000;
-  border-top-left-radius: 150%;
   width: 0;
   height: 0;
+  background-color: #000;
+  border-top-left-radius: 150%;
   transition: 0.8s;
 }
 main section.competencias .cards-container .card:hover img {
@@ -176,9 +176,9 @@ main section.competencias .cards-container .card:hover::after {
 }
 main section.exp article {
   margin: 0 auto;
-  padding: 20px;
-  margin-top: 20px;
-  border-radius: 6px;
+  padding: 1.25rem;
+  margin-top: 1.25rem;
+  border-radius: 0.37rem;
   overflow-y: hidden;
   transition: 0.4s;
   box-shadow: 0 0 4px 0 #088a56;
@@ -187,7 +187,7 @@ main section.exp article .titulo {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
+  gap: 1.25rem;
   flex-wrap: wrap;
   flex-wrap: nowrap;
   cursor: pointer;
@@ -205,13 +205,13 @@ main section.exp article .titulo button {
 }
 main section.exp article .descricao {
   border-top: 2px solid #088a56;
-  padding-top: 20px;
-  margin-top: 20px;
+  padding-top: 1.25rem;
+  margin-top: 1.25rem;
 }
 main section.contatos div {
   display: grid;
   grid-template-columns: repeat(2, minmax(max-content, 1fr));
-  gap: 30px;
+  gap: 1.87rem;
 }
 @media (max-width: 710px) {
   main section.contatos div {
@@ -222,22 +222,22 @@ main section.contatos div figure {
   display: flex;
   justify-content: initial;
   align-items: center;
-  gap: 10px;
+  gap: 0.62rem;
   flex-wrap: wrap;
 }
 main section.contatos div figure img {
-  height: 30px;
-  width: 30px;
+  height: 1.87rem;
+  width: 1.87rem;
 }
 main section.contatos div figure a {
   text-decoration: underline;
 }
 @media (max-width: 415px) {
   main section.contatos div figure {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   main section.contatos div figure img {
-    height: 24px;
-    width: 24px;
+    height: 1.2rem;
+    width: 1.2rem;
   }
 }/*# sourceMappingURL=styles.css.map */
